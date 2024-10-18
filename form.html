@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Idola Saya</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Palet warna baru */
+        body {
+            background-color: #f0f2f5;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Container utama */
+        .container-fluid {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Styling untuk sidebar */
+        .sidebar {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            max-height: auto;
+            min-height: 100vh;
+            border-right: 2px solid #6c757d;
+        }
+
+        .sidebar h4 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: #adb5bd;
+            padding: 15px 0;
+            display: block;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+            color: white;
+            border-radius: 4px;
+        }
+
+        /* Styling navbar */
+        .navbar {
+            background-color: #ffffff;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.8em;
+            color: #333;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            border-radius: 50%;
+            margin-right: 15px;
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Container form */
+        .content-wrapper {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #007bff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        label {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .form-control, .form-check-input {
+            border-radius: 8px;
+            border: 1px solid #ced4da;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        /* Footer sederhana */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #343a40;
+            color: white;
+            margin-top: auto;
+        }
+
+        /* Styling responsif untuk layar kecil */
+        @media (max-width: 576px) {
+            .content-wrapper {
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .sidebar {
+                padding: 15px;
+            }
+
+            .row {
+                display: block;
+            }
+
+            .navbar-brand img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <div class="ml-auto">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.jpeg" alt="Idola Saya">
+                    Idola Saya
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-lg-3 col-md-4 col-sm-12 sidebar">
+                <h4>Menu</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Halaman Utama</a></li>
+                    <li class="nav-item"><a class="nav-link" href="form.html">Formulir</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tabel.html">Tabel</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Konten utama -->
+            <main class="col-lg-9 col-md-8 col-sm-12">
+                <div class="content-wrapper">
+                    <h1>Formulir Idola Saya</h1>
+                    <form method="GET" action="tabel.html">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="nama">Nama</label>
+                                <input type="text" class="form-control" id="nama" name="nama" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="tanggal">Tanggal Lahir</label>
+                                <input type="date" class="form-control" id="tanggal" name="tanggal" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="jenis_kelamin">Jenis Kelamin</label><br>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" id="pria" name="jenis_kelamin" value="Pria" required class="form-check-input">
+                                <label for="pria" class="form-check-label">Pria</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita" required class="form-check-input">
+                                <label for="wanita" class="form-check-label">Wanita</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="hobi">Hobi</label><br>
+                            <div class="form-check">
+                                <input type="checkbox" id="hobi1" name="hobi" value="Musik" class="form-check-input">
+                                <label for="hobi1" class="form-check-label">Musik</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="hobi2" name="hobi" value="Olahraga" class="form-check-input">
+                                <label for="hobi2" class="form-check-label">Olahraga</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="hobi3" name="hobi" value="Anime" class="form-check-input">
+                                <label for="hobi3" class="form-check-label">Anime</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Kirim</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Yesa Viola 122140133. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

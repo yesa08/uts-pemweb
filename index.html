@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idola Saya</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container-fluid {
+            flex: 1;
+        }
+
+        .row {
+            min-height: 100%;
+        }
+
+        /* Styling sidebar */
+        .sidebar {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            height: auto;
+            border-right: 2px solid #6c757d;
+        }
+
+        .sidebar h4 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: #adb5bd;
+            padding: 15px 0;
+            display: block;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+            color: white;
+            border-radius: 4px;
+        }
+
+        /* Header dengan style yang lebih modern */
+        .navbar {
+            background-color: #ffffff;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            font-size: 1.8em;
+            color: #333;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand:hover {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .navbar img {
+            border-radius: 50%;
+            margin-right: 15px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .ml-auto {
+            margin-left: auto;
+        }
+
+        /* Konten utama */
+        .main-content {
+            padding: 40px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            padding: 20px;
+        }
+
+        .logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            font-size: 1.2em;
+            line-height: 1.8em;
+            margin-top: 20px;
+        }
+
+        .description strong {
+            color: #007bff;
+        }
+
+        /* Footer sederhana */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #343a40;
+            color: white;
+        }
+
+        /* Responsif untuk layar kecil */
+        @media (max-width: 576px) {
+            .main-content {
+                padding: 20px;
+            }
+
+            .sidebar {
+                padding: 15px;
+            }
+
+            .sidebar a {
+                font-size: 1.2em;
+                padding: 15px 0;
+            }
+
+            .row {
+                display: block;
+            }
+
+            .navbar img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header dengan gambar dan judul di sebelah kanan -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <div class="ml-auto">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.jpeg" alt="Idola Saya">
+                    Idola Saya
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-lg-3 col-md-4 col-sm-12 sidebar">
+                <h4>Menu</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Halaman Utama</a></li>
+                    <li class="nav-item"><a class="nav-link" href="form.html">Formulir</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tabel.html">Tabel</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Konten utama -->
+            <main class="col-lg-9 col-md-8 col-sm-12 main-content">
+                <div class="card">
+                    <h1 class="card-title">Selamat Datang di <strong>Idola Saya</strong></h1>
+                    <p class="description">
+                        Website ini didedikasikan untuk para penggemar <strong>artis</strong>, <strong>olahragawan</strong>, <strong>penyanyi</strong>, dan <strong>anime</strong> favorit Anda. 
+                        Di sini Anda bisa menemukan berbagai informasi terkait idola-idola ternama dari berbagai bidang. Anda juga bisa mengisi formulir untuk menambahkan idola favorit Anda, serta melihat tabel berisi data idola yang sudah ditambahkan oleh penggemar lainnya.
+                    </p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Yesa Viola 122140133. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

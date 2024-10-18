@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Idola Saya</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Warna dan background */
+        body {
+            background-color: #f0f2f5;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        /* Styling tabel */
+        .table {
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .table th {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .table th:hover {
+            background-color: #0056b3;
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .table tbody tr:hover {
+            background-color: #e3f2fd;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .table td {
+            padding: 15px;
+            font-size: 1em;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Mengatur tinggi tabel yang bisa discroll */
+        .scrollable-table {
+            max-height: 400px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Responsif untuk layar kecil */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .table th, .table td {
+                padding: 10px;
+            }
+
+            .scrollable-table {
+                max-height: 300px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .scrollable-table {
+                max-height: 250px;
+            }
+        }
+
+        /* Styling untuk sidebar */
+        .sidebar {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            height: auto;
+            min-height: 100vh;
+            width: 100%;
+            border-right: 2px solid #6c757d;
+        }
+
+        .sidebar h4 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: #adb5bd;
+            padding: 10px 0;
+            display: block;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+            color: white;
+            border-radius: 4px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #ffffff;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.8em;
+            color: #333;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            border-radius: 50%;
+            margin-right: 15px;
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Footer sederhana */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #343a40;
+            color: white;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <div class="ml-auto">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.jpeg" alt="Idola Saya">
+                    Idola Saya
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-lg-3 col-md-4 col-sm-12 sidebar">
+                <h4>Menu</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Halaman Utama</a></li>
+                    <li class="nav-item"><a class="nav-link" href="form.html">Formulir</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tabel.html">Tabel</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Konten utama -->
+            <main class="col-lg-9 col-md-8 col-sm-12">
+                <h1>Tabel Idola Saya</h1>
+                <div class="scrollable-table table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nama</th>
+                                <th>Tanggal Lahir</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Hobi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 50 Baris Data Dummy -->
+                            <tr><td>1</td><td>Idola 1</td><td>1990-01-01</td><td>Pria</td><td>Musik</td></tr>
+                            <tr><td>2</td><td>Idola 2</td><td>1990-01-02</td><td>Wanita</td><td>Olahraga</td></tr>
+                            <tr><td>3</td><td>Idola 3</td><td>1990-01-03</td><td>Pria</td><td>Anime</td></tr>
+                            <tr><td>4</td><td>Idola 4</td><td>1990-01-04</td><td>Wanita</td><td>Musik</td></tr>
+                            <tr><td>5</td><td>Idola 5</td><td>1990-01-05</td><td>Pria</td><td>Olahraga</td></tr>
+                            <tr><td>6</td><td>Idola 6</td><td>1990-01-06</td><td>Wanita</td><td>Anime</td></tr>
+                            <tr><td>7</td><td>Idola 7</td><td>1990-01-07</td><td>Pria</td><td>Musik</td></tr>
+                            <tr><td>8</td><td>Idola 8</td><td>1990-01-08</td><td>Wanita</td><td>Olahraga</td></tr>
+                            <tr><td>9</td><td>Idola 9</td><td>1990-01-09</td><td>Pria</td><td>Anime</td></tr>
+                            <tr><td>10</td><td>Idola 10</td><td>1990-01-10</td><td>Wanita</td><td>Musik</td></tr>
+                            <tr><td>11</td><td>Idola 11</td><td>1990-01-11</td><td>Pria</td><td>Olahraga</td></tr>
+                            <tr><td>12</td><td>Idola 12</td><td>1990-01-12</td><td>Wanita</td><td>Anime</td></tr>
+                            <tr><td>13</td><td>Idola 13</td><td>1990-01-13</td><td>Pria</td><td>Musik</td></tr>
+                            <tr><td>14</td><td>Idola 14</td><td>1990-01-14</td><td>Wanita</td><td>Olahraga</td></tr>
+                            <tr><td>15</td><td>Idola 15</td><td>1990-01-15</td><td>Pria</td><td>Anime</td></tr>
+                            <tr><td>16</td><td>Idola 16</td><td>1990-01-16</td><td>Wanita</td><td>Musik</td></tr>
+                            <tr><td>17</td><td>Idola 17</td><td>1990-01-17</td><td>Pria</td><td>Olahraga</td></tr>
+                            <tr><td>18</td><td>Idola 18</td><td>1990-01-18</td><td>Wanita</td><td>Anime</td></tr>
+                            <tr><td>19</td><td>Idola 19</td><td>1990-01-19</td><td>Pria</td><td>Musik</td></tr>
+                            <tr><td>20</td><td>Idola 20</td><td>1990-01-20</td><td>Wanita</td><td>Olahraga</td></tr>
+                            <tr><td>21</td><td>Idola 21</td><td>1990-01-21</td><td>Pria</td><td>Anime</td></tr>
+                            <tr><td>22</td><td>Idola 22</td><td>1990-01-22</td><td>Wanita</td><td>Musik</td></tr>
+                            <tr><td>23</td><td>Idola 23</td><td>1990-01-23</td><td>Pria</td><td>Olahraga</td></tr>
+                            <tr><td>24</td><td>Idola 24</td><td>1990-01-24</td><td>Wanita</td><td>Anime</td></tr>
+                            <tr><td>25</td><td>Idola 25</td><td>1990-01-25</td><td>Pria</td><td>Musik</td></tr>
+                            <tr><td>26</td><td>Idola 26</td><td>1990-01-26</td><td>Wanita</td><td>Olahraga</td></tr>
+                            <tr><td>27</td><td>Idola 27</td><td>1990-01-27</td><td>Pria</td><td>Anime</td></tr>
+                            <tr><td>28</td><td>Idola 28</td><td>1990-01-28</td><td>Wanita</td><td>Musik</td></tr>
+                            <tr><td>29</td><td>Idola 29</td><td>1990-01-29</td><td>Pria</td><td>Olahraga</td></tr>
+                            <tr><td>30</td><td>Idola 30</td><td>1990-01-30</td><td>Wanita</td><td>Anime</td></tr>
+                            <tr><td>31</td><td>Idola 31</td><td>1990-01-01</td><td>Pria</td><td>Musik</td></tr>
+                            <tr><td>32</td><td>Idola 32</td><td>1990-01-02</td><td>Wanita</td><td>Olahraga</td></tr>
+                            <tr><td>33</td><td>Idola 33</td><td>1990-01-03</td><td>Pria</td><td>Anime</td></tr>
+                            <tr><td>34</td><td>Idola 34</td><td>1990-01-04</td><td>Wanita</td><td>Musik</td></tr>
+                            <tr><td>35</td><td>Idola 35</td><td>1990-01-05</td><td>Pria</td><td>Olahraga</td></tr>
+                            <tr><td>36</td><td>Idola 36</td><td>1990-01-06</td><td>Wanita</td><td>Anime</td></tr>
+                            <tr><td>37</td><td>Idola 37</td><td>1990-01-07</td><td>Pria</td><td>Musik</td></tr>
+                            <tr><td>38</td><td>Idola 38</td><td>1990-01-08</td><td>Wanita</td><td>Olahraga</td></tr>
+                            <tr><td>39</td><td>Idola 39</td><td>1990-01-09</td><td>Pria</td><td>Anime</td></tr>
+                            <tr><td>40</td><td>Idola 40</td><td>1990-01-10</td><td>Wanita</td><td>Musik</td></tr>
+                            <tr><td>41</td><td>Idola 41</td><td>1990-01-11</td><td>Pria</td><td>Olahraga</td></tr>
+                            <tr><td>42</td><td>Idola 42</td><td>1990-01-12</td><td>Wanita</td><td>Anime</td></tr>
+                            <tr><td>43</td><td>Idola 43</td><td>1990-01-13</td><td>Pria</td><td>Musik</td></tr>
+                            <tr><td>44</td><td>Idola 44</td><td>1990-01-14</td><td>Wanita</td><td>Olahraga</td></tr>
+                            <tr><td>45</td><td>Idola 45</td><td>1990-01-15</td><td>Pria</td><td>Anime</td></tr>
+                            <tr><td>46</td><td>Idola 46</td><td>1990-01-16</td><td>Wanita</td><td>Musik</td></tr>
+                            <tr><td>47</td><td>Idola 47</td><td>1990-01-17</td><td>Pria</td><td>Olahraga</td></tr>
+                            <tr><td>48</td><td>Idola 48</td><td>1990-01-18</td><td>Wanita</td><td>Anime</td></tr>
+                            <tr><td>49</td><td>Idola 49</td><td>1990-01-19</td><td>Pria</td><td>Musik</td></tr>
+                            <tr><td>50</td><td>Idola 50</td><td>1990-01-20</td><td>Wanita</td><td>Olahraga</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Yesa Viola 122140133. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
